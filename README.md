@@ -1936,3 +1936,5 @@ void save_to_sd(float ext, float* predictions) {
 **Développé avec ❤️ pour M5Stack TABS**
 
 *Dernière mise à jour : 30 novembre 2025*
+#   P r e d i c t e m p  
+ 
