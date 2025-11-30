@@ -16,7 +16,7 @@ une interface tactile embarquée permettant d'afficher prédictions et historiqu
 
 Le pipeline complet est composé de trois étapes principales :
 
-2.1 Génération de Données
+    2.1 Génération de Données
 
 Via data_generator_gui.py :
 
@@ -26,7 +26,7 @@ encodage saisonnier et journalier (sin/cos),
 
 export en CSV.
 
-2.2 Entraînement du Modèle
+    2.2 Entraînement du Modèle
 
 Via train_model_with_date.py :
 
@@ -38,7 +38,7 @@ métriques : MSE (perte), MAE (évaluation),
 
 export automatique des poids en C++ (neural_weights.h).
 
-2.3 Déploiement sur M5Stack
+    2.3 Déploiement sur M5Stack
 
 Dans RoomPredictor.ino :
 
@@ -51,7 +51,7 @@ affichage graphique des prédictions et données historiques,
 intégration API Open-Meteo.
 
 3. Installation
-3.1 Prérequis Python
+    3.1 Prérequis Python
 
 Python 3.10+
 
@@ -61,7 +61,7 @@ Installer les dépendances :
 
 pip install -r requirements.txt
 
-3.2 Prérequis Arduino / M5Stack
+    3.2 Prérequis Arduino / M5Stack
 
 Arduino IDE 2.x
 
@@ -78,6 +78,9 @@ csv_data.h
 Puis téléverser RoomPredictor.ino.
 
 4. Utilisation
+
+<img width="1920" height="1027" alt="image" src="https://github.com/user-attachments/assets/b73bddfc-b776-40e5-b8f4-03be12712d53" />
+
 Étape 1 — Générer les données
 python data_generator_gui.py
 
@@ -144,3 +147,4 @@ Données décalées → Regénérer les CSV.
 8. Licence
 
 Projet personnel à but pédagogique. Toute réutilisation doit mentionner l'auteur.
+
