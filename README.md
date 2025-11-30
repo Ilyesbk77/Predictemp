@@ -16,7 +16,7 @@ une interface tactile embarquée permettant d'afficher prédictions et historiqu
 
 Le pipeline complet est composé de trois étapes principales :
 
-    2.1 Génération de Données
+2.1 Génération de Données
 
 Via data_generator_gui.py :
 
@@ -26,19 +26,19 @@ encodage saisonnier et journalier (sin/cos),
 
 export en CSV.
 
-    2.2 Entraînement du Modèle
+2.2 Entraînement du Modèle
 
 Via train_model_with_date.py :
 
-normalisation (StandardScaler),
+    normalisation (StandardScaler),
 
-réseau 5 → 32 → 32 → N sorties,
+    réseau 5 → 32 → 32 → N sorties,
 
-métriques : MSE (perte), MAE (évaluation),
+    métriques : MSE (perte), MAE (évaluation),
 
-export automatique des poids en C++ (neural_weights.h).
+    export automatique des poids en C++ (neural_weights.h).
 
-    2.3 Déploiement sur M5Stack
+2.3 Déploiement sur M5Stack
 
 Dans RoomPredictor.ino :
 
@@ -59,21 +59,21 @@ pip
 
 Installer les dépendances :
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
-    3.2 Prérequis Arduino / M5Stack
+3.2 Prérequis Arduino / M5Stack
 
-Arduino IDE 2.x
+    Arduino IDE 2.x
 
-Carte : M5Stack TABS
+    Carte : M5Stack TABS
 
-Partition : Huge APP (3 MB)
+    Partition : Huge APP (3 MB)
 
 Copier dans le dossier RoomPredictor/ :
 
-neural_weights.h
+    neural_weights.h
 
-csv_data.h
+    csv_data.h
 
 Puis téléverser RoomPredictor.ino.
 
@@ -82,25 +82,27 @@ Puis téléverser RoomPredictor.ino.
 <img width="1920" height="1027" alt="image" src="https://github.com/user-attachments/assets/b73bddfc-b776-40e5-b8f4-03be12712d53" />
 
 Étape 1 — Générer les données
-python data_generator_gui.py
+
+    python data_generator_gui.py
 
 Étape 2 — Entraîner le modèle
-python train_model_with_date.py
 
+    python train_model_with_date.py
 
 Sorties :
 
-temp_model_with_date.h5
+    temp_model_with_date.h5
 
-neural_weights.h
+    neural_weights.h
 
 Étape 3 — Exporter les données CSV vers Arduino
-python export_csv_to_arduino_v2.py
+
+    python export_csv_to_arduino_v2.py
 
 
 Sortie :
 
-csv_data.h
+    csv_data.h
 
 Étape 4 — Téléverser sur M5Stack
 
@@ -147,4 +149,5 @@ Données décalées → Regénérer les CSV.
 8. Licence
 
 Projet personnel à but pédagogique. Toute réutilisation doit mentionner l'auteur.
+
 
