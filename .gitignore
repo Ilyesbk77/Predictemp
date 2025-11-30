@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+
+# Models
+*.h5
+*.weights.h5
+*.pkl
+*.ckpt
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Arduino/PlatformIO build artifacts (si nécessaire)
+# .pio/
+# .vscode/c_cpp_properties.json
